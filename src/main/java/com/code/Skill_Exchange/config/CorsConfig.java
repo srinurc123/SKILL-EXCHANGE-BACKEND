@@ -14,7 +14,10 @@ public class CorsConfig {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
                         //.allowedOrigins("http://localhost:3000") for localhost 
-                .allowedOrigins("https://on-demand-skills.netlify.app/")
+//                .allowedOrigins("https://on-demand-skills.netlify.app/")   for netlify
+               
+                    .allowedOrigins("https://skill-exchange-frontend.vercel.app/")
+
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true);
